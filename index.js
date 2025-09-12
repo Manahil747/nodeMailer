@@ -41,11 +41,6 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-// MongoDB Connection
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("Mongodb Connected"))
-  .catch((err) => console.log("MongoDB connection error:", err));
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
